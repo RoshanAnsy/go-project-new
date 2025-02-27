@@ -3,7 +3,7 @@ package controllers
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/roshanAnsy/go-project-new/config"
-	"github.com/roshanAnsy/go-project-new/model"
+	"github.com/roshanAnsy/go-project-new/models"
 )
 
 
