@@ -4,6 +4,7 @@ import (
 	"log"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	"github.com/roshanAnsy/go-project-new/models"
 )
 
 var DB *gorm.DB
@@ -17,6 +18,10 @@ func ConnectDB() {
 	if err !=nil {
 		log.Fatal("failed to connect database: ", err)
 	}
+	// Auto-migrate User model
+	DB.AutoMigrate(&models.User{})
+	log.Println("Database connected successfully!")
+
 	log.Println("Connected to the database!")
 
 }
